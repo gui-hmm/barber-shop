@@ -35,16 +35,12 @@ barber-shop/
 ## 🛠️ Como Executar
 🔹 Backend
 ```bash
-Copy
-Edit
 cd barber-shop-api
 docker-compose up --build 
 ```
 
 🔹 Frontend
 ```bash
-Copy
-Edit
 cd barber-shop-ui
 npm install
 ng serve
