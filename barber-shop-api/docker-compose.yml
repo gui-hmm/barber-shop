@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+    command: bash start-dev.sh
+    environment:
+      url: ${DB_URL}
+      username: ${DB_USER}
+      password: ${DB_PASSWORD}
+      SPRING_PROFILES_ACTIVE: dev
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    volumes:
+      - .:/barber-shop-api:z
+    networks:
+      - barber-shop-net
+networks:
+  barber-shop-net:
+    name: barber-shop-net
+    external: true
